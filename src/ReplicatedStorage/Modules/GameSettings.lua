@@ -171,12 +171,12 @@ local settingsRules = { -- limits certain values to an extent
 	};
 	Visualize = {
 		Type = "bool";
-		DisplayName = "Add visualizer?";
+		DisplayName = "Add visualizer";
 		Category = {"User Interface"};
 	};
 	VisualizerBars = {
 		Type = "number";
-		DisplayName = "Amount of bars in visualiser. Recommend changing if you are on low-end device";
+		DisplayName = "Bars in visualiser. Recommend changing if you are on low-end device";
 		Measure = "x";
 		Category = {"User Interface"};
 		DivideEach = 1;

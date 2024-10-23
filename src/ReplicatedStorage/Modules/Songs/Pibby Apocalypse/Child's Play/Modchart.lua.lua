@@ -177,10 +177,8 @@ return {
 	end,
 	
 	cleanUp = function()
-		if dad then
-			dad = nil
-			bf = nil
-		end
+		dad = nil;
+		bf = nil;
 		-- Set Note Rotation to 0 (default)
 		if gmeui then
 			gmeui.Rotation = 0
