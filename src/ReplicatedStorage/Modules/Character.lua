@@ -536,7 +536,7 @@ function Character:PlayAnimation(name,force,looped)
 			if n == "idle" or n.Looped==true then continue end
 			v.TimePosition=0
 			if(n~=name)then
-				v:Stop(.05)
+				v:Stop(.001)
 			end
 		end
 		track:SetAttribute("Playing",true)

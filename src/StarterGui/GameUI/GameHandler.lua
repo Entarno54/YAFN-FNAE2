@@ -866,8 +866,8 @@ function module.genSong(songName, songSettings, plr2) -- plr2: 1=dad2 2=bf2
 		stepTime = 0;
 		bpm = songData.bpm;
 	}
-	local evilness = nil
-	local evilnesstwo = nil
+	local setanimationtableevent = nil
+	local setupcharacter = nil
 	-- set up the player stuff
 	do
 		local BFChar = songData.player1
@@ -939,7 +939,7 @@ function module.genSong(songName, songSettings, plr2) -- plr2: 1=dad2 2=bf2
 			end
 		end
 		
-		evilness = function(side, folder)
+		setanimationtableevent = function(side, folder)
 			makeAnimTable(side, folder)
 		end
 		
@@ -1024,7 +1024,7 @@ function module.genSong(songName, songSettings, plr2) -- plr2: 1=dad2 2=bf2
 				end
 			end
 		end
-		evilnesstwo = function(index, obj)
+		setupcharacter = function(index, obj)
 			if index == "objectorderfind" then
 				print(obj)
 				index = table.find(objectOrder, obj)
@@ -1094,7 +1094,7 @@ function module.genSong(songName, songSettings, plr2) -- plr2: 1=dad2 2=bf2
 			print(charOrder[index])
 			if (not charOrder[index]) then continue end
 			print(obj, index, sides[index], module.PositioningParts[sides[index]], charOrder[index])
-			evilnesstwo(index, obj)
+			setupcharacter(index, obj)
 		end
 	end
 
@@ -1732,8 +1732,8 @@ function module.genSong(songName, songSettings, plr2) -- plr2: 1=dad2 2=bf2
 		
 		elseif curEvent == "change character" then
 			if game.ReplicatedStorage.Animations.CharacterAnims:FindFirstChild(value2) then
-				evilness(value1, game.ReplicatedStorage.Animations.CharacterAnims:FindFirstChild(value2))
-				evilnesstwo("objectorderfind", value1)
+				setanimationtableevent(value1, game.ReplicatedStorage.Animations.CharacterAnims:FindFirstChild(value2))
+				setupcharacter("objectorderfind", value1)
 				local g = value1
 				if g == "BF" then g = true else g = false end
 				module.changeIcon(value2, g)
