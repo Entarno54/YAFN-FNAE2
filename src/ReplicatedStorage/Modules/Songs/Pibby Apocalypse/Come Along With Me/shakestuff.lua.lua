@@ -132,6 +132,8 @@ return {
 	Update = function()
 		-- this might be a huge cause of lag
 		if followchars == true then
+			local dad = playerObjects.Dad
+			local bf = playerObjecs.BF
 			local dadAnim = tostring(dad:GetCurrentSingAnim())
 			local bfAnim = tostring(bf:GetCurrentSingAnim())
 			if mustHitSection == false then

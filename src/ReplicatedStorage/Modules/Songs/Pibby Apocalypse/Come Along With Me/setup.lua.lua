@@ -5,7 +5,8 @@ local minecraftSky = nil
 
 return {
 	preStart = function()
-		
+		local bf = playerObjects.BF
+		local dad = playerObjects.Dad
 		-- Make characters have their humanoid root part their primary part
 		bf.Obj.PrimaryPart = bf.Obj.HumanoidRootPart
 		dad.Obj.PrimaryPart = dad.Obj.HumanoidRootPart
