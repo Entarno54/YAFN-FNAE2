@@ -3,6 +3,7 @@
 -- Please note that the binary will be met with rounding problems alongside with Lua's floating point numbers.
 -- 
 --v0.0.1
+--test
 local JCoder = {}
 
 function JCoder.ToNumber(...:string)
