@@ -59,7 +59,7 @@ function module.new(Frame, BarCount)
 	for i=1, BAR_COUNT do
 		local Bar = Instance.new("Frame")
 		Bar.BorderSizePixel = 0
-		Bar.BackgroundColor3 = Color3.new(0.988235, 0.898039, 0.623529)
+		Bar.BackgroundColor3 = Color3.new(0.537254, 0.768627, 0.839215)
 		Bar.AnchorPoint = Vector2.new(0,0.5)
 		Bar.Size = UDim2.new(BAR_SIZE,0,0.02,0)
 		Bar.Position = UDim2.new(BAR_SIZE* (i-1), 0,0.5,0)
