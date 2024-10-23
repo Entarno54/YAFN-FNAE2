@@ -86,7 +86,8 @@ return {
 		Instrumental = 77210890046684;
 		DadAnimations = "GumballPretend";
 		BFAnimations = "BFPA";
-		mapProps = "PASchool"
+		mapProps = "PASchool";
+		hideBox = true;
 	};
 	["My Amazing World"] = {
 		Instrumental = 101677518227342;
@@ -106,6 +107,7 @@ return {
 		Instrumental = 101465822982600;
 		DadAnimations = "GumballNormal";
 		BFAnimations = "BFPA";
+		mapProps = "ForgottenWorld";
 	};
 	["Come Along With Me"] = {
 		Instrumental = 124411322992324;

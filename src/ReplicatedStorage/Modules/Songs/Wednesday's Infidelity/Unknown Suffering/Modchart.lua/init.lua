@@ -121,7 +121,9 @@ return {
 		curSection = nil
 		dodge = nil
 		dodgeButtons = nil
-		buttonCheck:Disconnect()
+		if buttonCheck then
+			buttonCheck:Disconnect()
+		end
 		buttonCheck = nil
 	end,
 }

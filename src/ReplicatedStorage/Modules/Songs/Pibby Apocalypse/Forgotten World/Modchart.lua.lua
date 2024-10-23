@@ -22,6 +22,8 @@ local xx2 = nil; -- bf x offset
 local yy2 = nil; -- bf y offset
 local ofs = nil;
 local followchars = nil;
+local dad = nil;
+local bf = nil;
 
 -- Define blank function
 local addTween = nil;
@@ -29,6 +31,8 @@ local addTween = nil;
 return {
 	preStart = function()
 		-- Define Variables
+		dad = playerObjects.Dad
+		bf = playerObjects.BF
 		colors = {'#31a2fd', '#31fd8c', '#f794f7', '#f96d63', '#fba633'};
 		angleshit = 1;
 		anglevar = 1;
@@ -192,6 +196,8 @@ return {
 		yy2 = nil; -- bf y offset
 		ofs = nil;
 		followchars = nil;
+		dad = nil;
+		bf = nil;
 
 		-- Undefine Function
 		addTween = nil

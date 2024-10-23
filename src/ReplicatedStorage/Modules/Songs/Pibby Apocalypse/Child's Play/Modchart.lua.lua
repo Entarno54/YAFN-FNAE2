@@ -23,6 +23,8 @@ local yy2 = nil; -- bf y offset
 local ofs = nil;
 local followchars = nil;
 local shake = false
+local dad = nil
+local bf = nil
 
 -- Define blank function
 local addTween = nil;
@@ -30,6 +32,8 @@ local addTween = nil;
 return {
 	preStart = function()
 		-- Define Variables
+		dad = playerObjects.Dad 
+		bf = playerObjects.BF
 		shake = false
 		colors = {'#31a2fd', '#31fd8c', '#f794f7', '#f96d63', '#fba633'};
 		angleshit = 1;
@@ -173,6 +177,10 @@ return {
 	end,
 	
 	cleanUp = function()
+		if dad then
+			dad = nil
+			bf = nil
+		end
 		-- Set Note Rotation to 0 (default)
 		if gmeui then
 			gmeui.Rotation = 0
