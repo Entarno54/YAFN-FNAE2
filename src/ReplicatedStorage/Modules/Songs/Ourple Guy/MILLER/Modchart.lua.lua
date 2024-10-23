@@ -16,6 +16,7 @@ local objects = {
 	dad = nil;
 	camGame = nil;
 }
+local helper = require(game.ReplicatedStorage.Modules.ModchartHelper)
 
 return {
 
@@ -90,6 +91,7 @@ return {
 	end,
 	
 	preStart = function()
+		camControls.StayOnCenter = true
 		local dad = playerObjects.Dad.Obj
 		dad.PrimaryPart  = dad.HumanoidRootPart
 		dad:PivotTo(mapProps.Dad.CFrame)
