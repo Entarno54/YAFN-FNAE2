@@ -155,6 +155,9 @@ return {
 	};
 	["Promise"] = {
 		Instrumental = 78823623292132;
+		DadAnimations = "SoftGirl";
+		mapProps = "CharacterReposPromise";
+		BFAnimations = "SoftBoy"
 	}
 }
 --[[
