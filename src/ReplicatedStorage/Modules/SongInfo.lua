@@ -27,23 +27,31 @@ return {
 		["OBJPR_TextStrokeColor3"] = Color3.new(0.301960, 0.137254, 0.298039);
 		["OBJPR_Font"] = Enum.Font.IndieFlower;
 		["Description"]= "funnymanBAUDAS70, Requiem Zero, Kylevi, Awe, Brave, Aaron, Tormented, JustJasonLol, Schweizer, Tinny, ADA_Funni, Yoosuf Meekail, IAmDaDogeOfTheFuture, Corn, Rareblin, Sevc_Ext_277, Lettush, Just Nick, N O M I E, Nazmee Jafaar, RaiperStyle, L-C, Vurn, Bonk, Waze, Alex, Dul, Kwispy, Cruz, Enderrot, Fidy, Fakeburritos, Silver, NightmareXoNIX, M4";
+		SongOrder = {
+		}
 	};
 	["Remixes"] = {
 		["OBJPR_TextColor3"] = Color3.new(0.776470, 0.717647, 1);
 		["OBJPR_TextStrokeColor3"] = Color3.new(0, 0, 0);
 		["OBJPR_Font"] = Enum.Font.IndieFlower;
 		["Description"]= "Awe";
+		SongOrder = {
+		}
 	};
 	["Ourple Guy"] = {
 		["OBJPR_TextColor3"] = Color3.new(0.345098, 0.207843, 0.4);
 		["OBJPR_TextStrokeColor3"] = Color3.new(0, 0, 0);
 		["OBJPR_Font"] = Enum.Font.IndieFlower;
 		["Description"]= "headdzo [Director, Musician, Artist] blackberri [Director, Musician] Cold_Vee [Director, Coder] Data [Coder] Fabr [Coder] Melyndee [Coder, Artist] lossarquo [Artist] Binejyeah [Artist] Kazsper [Artist] jonspeedarts [Artist] Mr. DJ [Artist] Libur [Artist] yumii [Artist] infry [Artist] maboi9798 [Artist] Stuffy [Artist] Mr. Luwigi [Artist] QuietTomato [Artist] kiwiquest [Musician, Artist] Smokey99k [Musician] discoverypages [Voice Actor] MewMarissa [Musician] RedTV53 [Musician] Wrathstetic [Musician] maddiesmiles [Musician] justisaac [Musician] marstarbro [Musician] periodical [Musician] greggreg [Musician] Xhitest - [Musician] zeroh [Musician] Brooklyn [Voice Actor, Charter] pointy [Charter] Rotty [Charter] gibz679 [Charter] salamipaste [Creator of Fat Jones] jeff [Fat Jones Voice] ";
+		SongOrder = {
+		}
 	};
 	["RodentRap"] = {
 		["OBJPR_TextColor3"] = Color3.new(0.490196, 0.498039, 1);
 		["OBJPR_TextStrokeColor3"] = Color3.new(0, 0, 0);
-		["Description"] = "wanda fizzd kiddbrute HenryEYES Clone Hero Tom Fulp StuffedWombat mmatt_ugh Squidly Luis GeoKureli Will Blanton SrPelo Austin East Krystin, Kaye-lyn, Cassidy, Mack, Levi, and Jasmine. Laurel bbpanzu Etika Foamymuffin (insert travis scott lyrics here) SiIvaGunner Masaya Matsuura"
+		["Description"] = "wanda fizzd kiddbrute HenryEYES Clone Hero Tom Fulp StuffedWombat mmatt_ugh Squidly Luis GeoKureli Will Blanton SrPelo Austin East Krystin, Kaye-lyn, Cassidy, Mack, Levi, and Jasmine. Laurel bbpanzu Etika Foamymuffin (insert travis scott lyrics here) SiIvaGunner Masaya Matsuura";
+		SongOrder = {
+		}
 	};
 	["Matt Voiid Sides"] = {
 		["OBJPR_TextColor3"] = Color3.new(0,0,0);

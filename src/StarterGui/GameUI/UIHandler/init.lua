@@ -481,6 +481,8 @@ function UIHandler.MoveToMod(ModName,silent) -- mod change
 
 		for SongName,Difficulties in next,ModLibrary[ModName] do
 			-- Try to get a pre-set position from the SongOrder list
+			print(ModName)
+			print(SongInfo[ModName])
 			local SongPos = SongInfo[ModName] and table.find(SongInfo[ModName].SongOrder,SongName)
 			if not SongPos then offset += 1;SongPos = offset end
 
@@ -681,7 +683,7 @@ function UIHandler.ChangeDiff(x)-- x can be either a number or a string.
 	Score.Points.Text = string.rep("0", 9 - string.len(scoretext)) .. scoretext
 	Score.Accuracy.Text = accuracytext:sub(1, 5) .. "%"
 	--print(songData, SongIdInfo, SongInfo, SongPick, SongObjects)
-	local IconInfo = (Icons[songData.song.player2] or Icons.Face)
+	local IconInfo = (Icons[SongIdInfo[songData.song.song].DadAnimations] or Icons.Dad)
 	if IconInfo.NormalXMLArgs then
 		DiskIcon:AddSparrowXML(IconInfo.NormalXMLArgs[1],"Display",unpack(IconInfo.NormalXMLArgs,2))
 		DiskIcon.Animations.Display.ImageId = IconInfo.NormalId
