@@ -117,6 +117,7 @@ local function OWDisplayUpdate(textDisplay)
 end 
 
 local function InitializeGame(Module, PlayerMode, plrs)
+	SettButton:deselect()
 	SettButton:setEnabled(false)
 	UIHandler.ToggleSettingsUI(false) -- Hides the settings UI
 	GameHandler.PositioningParts.isOpponentAvailable = InfoRetriever:InvokeServer(0x0,GameHandler.PositioningParts.Spot)
@@ -247,6 +248,7 @@ local function InitializeGame(Module, PlayerMode, plrs)
 	local GpECon = GameHandler.GameplayEvent:Connect(getEventHandler(compRemote))
 	GameHandler.startCountdown()
 	ESECon = GameHandler.endSongEvent:Connect(function()
+		LeaveButton:deselect()
 		LeaveButton:setEnabled(false)
 		compRemote:FireServer(0x2)
 		CRCon:Disconnect()
@@ -279,6 +281,7 @@ UIHandler.SongPlayEvent:Connect(function(Module, Mode, av)
 
 	UIHandler.ToggleUISongPickVisibility(false)
 	OwnerWait.Visible = true
+	LeaveButton:deselect()
 	LeaveButton:setEnabled(false)
 
 	InitializeGame(Module, Mode, nil)
@@ -301,6 +304,7 @@ end
 
 remote.OnClientEvent:Connect(function(signalType,...)
 	if signalType == 0x0 then -- InitSpot, AKA join
+		LeaveButton:deselect()
 		LeaveButton:setEnabled(false)
 		local GPIndex = UIS.GamepadEnabled and 2 or 1
 		for _,key in next,GameHandler.settings.MenuControls.QuitSpot do
@@ -378,11 +382,13 @@ remote.OnClientEvent:Connect(function(signalType,...)
 		if PositioningParts.PlayAs == nil then
 			return
 		end
+		LeaveButton:deselect()
 		LeaveButton:setEnabled(false)
 		--remote:FireServer(0x1,songToPlay,PositioningParts.Spot)
 		InitializeGame(songToPlay,sP,PositioningParts.PlayAs)	
 	elseif signalType == 0x1 then -- leave
 		UserInputBindables.ClearBinds("QuitSpot")
+		LeaveButton:deselect()
 		LeaveButton:setEnabled(false)
 		SettButton:setEnabled(true)
 		UIHandler.ToggleUISongPickVisibility(false)
