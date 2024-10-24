@@ -64,10 +64,10 @@ return {
 			--	mapProps.Glass.Decal.Transparency = 0
 			--end
 			for _, g in mapProps.Mountain:GetDescendants() do
-				if g:IsA("BasePart") then
+				if g:IsA("BasePart") or g:IsA("Decal") and not g:FindFirstChildWhichIsA("Decal") then
 					g.Transparency = 0
 				elseif g:IsA("ParticleEmitter") then
-					g.Enabled = false
+					g.Enabled = true
 				end
 			end
 			for _, g in mapProps.Ground:GetDescendants() do
@@ -123,7 +123,7 @@ return {
 			--	mapProps.Glass.Decal.Transparency = 0
 			--end
 			for _, g in mapProps.Mountain:GetDescendants() do
-				if g:IsA("BasePart") then
+				if g:IsA("BasePart") or g:IsA("Decal") then
 					g.Transparency = 1
 				elseif g:IsA("ParticleEmitter") then
 					g.Enabled = false
@@ -178,7 +178,7 @@ return {
 			--mapProps.dadPos3:Destroy()
 			--mapProps.bfPos3:Destroy()
 			for _, g in mapProps.Mountain:GetDescendants() do
-				if g:IsA("BasePart") then
+				if g:IsA("BasePart") or g:IsA("Decal") then
 					g.Transparency = 1
 				elseif g:IsA("ParticleEmitter") then
 					g.Enabled = false
@@ -221,7 +221,7 @@ return {
 			--mapProps.bfPos2:Destroy()
 			
 			for _, g in mapProps.Mountain:GetDescendants() do
-				if g:IsA("BasePart") then
+				if g:IsA("BasePart") or g:IsA("Decal") then
 					g.Transparency = 1
 				elseif g:IsA("ParticleEmitter") then
 					g.Enabled = false
