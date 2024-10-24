@@ -64,7 +64,7 @@ return {
 			--	mapProps.Glass.Decal.Transparency = 0
 			--end
 			for _, g in mapProps.Mountain:GetDescendants() do
-				if g:IsA("BasePart") or g:IsA("Decal") and not g:FindFirstChildWhichIsA("Decal") then
+				if g:IsA("BasePart") and not g:FindFirstChildWhichIsA("Decal") or g:IsA("Decal")  then
 					g.Transparency = 0
 				elseif g:IsA("ParticleEmitter") then
 					g.Enabled = true
