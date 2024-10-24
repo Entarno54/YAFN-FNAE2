@@ -152,6 +152,9 @@ return {
 		DadAnimations = "HenryMiller";
 		hideBox = true;
 		mapProps = "MILLER"
+	};
+	["Promise"] = {
+		Instrumental = 78823623292132;
 	}
 }
 --[[

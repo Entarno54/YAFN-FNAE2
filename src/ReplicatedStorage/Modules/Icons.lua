@@ -307,7 +307,36 @@ return {
 		NormalId = "rbxassetid://125362090525531";
 		OffsetDead = Vector2.new(150, 0);
 		IconColor = Color3.fromRGB(50, 180, 213)
+	};
+	FinnPAOne = {
+		NormalDimensions = Vector2.new(150, 150);
+		DeadDimentions = Vector2.new(150, 150);
+		NormalId = "rbxassetid://129361950470313";
+		OffsetDead = Vector2.new(150, 0);
+		IconColor = Color3.fromRGB(41, 61, 61)
+	};
+	FinnPATwo = {
+		NormalDimensions = Vector2.new(150, 150);
+		DeadDimentions = Vector2.new(150, 150);
+		NormalId = "rbxassetid://129361950470313";
+		OffsetDead = Vector2.new(150, 0);
+		IconColor = Color3.fromRGB(41, 61, 61)
+	};
+	FinnPATwoSword = {
+		NormalDimensions = Vector2.new(150, 150);
+		DeadDimentions = Vector2.new(150, 150);
+		NormalId = "rbxassetid://129361950470313";
+		OffsetDead = Vector2.new(150, 0);
+		IconColor = Color3.fromRGB(41, 61, 61)
+	};
+	FinnPAThree = {
+		NormalDimensions = Vector2.new(150, 150);
+		DeadDimentions = Vector2.new(150, 150);
+		NormalId = "rbxassetid://129361950470313";
+		OffsetDead = Vector2.new(150, 0);
+		IconColor = Color3.fromRGB(41, 61, 61)
 	}
+	
 }
 --[[
 ExampleCharacter = { -- Make sure the name of the Icon matches what it's called in the .JSON file
