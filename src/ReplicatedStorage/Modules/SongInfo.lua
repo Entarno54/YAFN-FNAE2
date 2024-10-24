@@ -44,7 +44,7 @@ return {
 		["OBJPR_TextColor3"] = Color3.new(0.490196, 0.498039, 1);
 		["OBJPR_TextStrokeColor3"] = Color3.new(0, 0, 0);
 		["Description"] = "wanda fizzd kiddbrute HenryEYES Clone Hero Tom Fulp StuffedWombat mmatt_ugh Squidly Luis GeoKureli Will Blanton SrPelo Austin East Krystin, Kaye-lyn, Cassidy, Mack, Levi, and Jasmine. Laurel bbpanzu Etika Foamymuffin (insert travis scott lyrics here) SiIvaGunner Masaya Matsuura"
-	}
+	};
 	["Matt Voiid Sides"] = {
 		["OBJPR_TextColor3"] = Color3.new(0,0,0);
 		["OBJPR_TextStrokeColor3"] = Color3.new(0.564706, 0, 0.556863);
