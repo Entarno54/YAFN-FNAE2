@@ -2,7 +2,7 @@ do
 	local VERSION = "Prerelease V5"
 
 	local success, err = pcall(function()
-		local request = game:GetService("HttpService"):GetAsync("https://raw.githubusercontent.com/Piper0007/YAFN-Banana-Edition/main/Version.json")
+		local request = game:GetService("HttpService"):GetAsync("https://raw.githubusercontent.com/Entarno54/YAFN-FNAE2/main/Version.json")
 		
 		--print("Data From GitHub: " .. request)
 		request = game:GetService("HttpService"):JSONDecode(tostring(request))
