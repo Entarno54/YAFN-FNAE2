@@ -157,7 +157,19 @@ return {
 		Instrumental = 78823623292132;
 		DadAnimations = "SoftGirl";
 		mapProps = "CharacterReposPromise";
-		BFAnimations = "SoftBoy"
+		BFAnimations = "SoftBoy";
+		hideBox = true
+	};
+	["Suffering Siblings"] = {
+		Instrumental = 138442962130905;
+		DadAnimations = "FinnTwoSword";
+		ExtraAnimations = {
+			["GF"] = {Side = "Left", Animation = "BF"};
+			["Jake"] = {Side = "Right", Animation = "Dad"}
+		};
+		BFAnimations = "BFPA";
+		NoteGroup = "Pibby";
+		hideBox = true
 	}
 }
 --[[
