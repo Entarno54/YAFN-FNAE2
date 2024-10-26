@@ -164,8 +164,8 @@ return {
 		Instrumental = 138442962130905;
 		DadAnimations = "FinnTwoSword";
 		ExtraAnimations = {
-			["GF"] = {Side = "Left", Animation = "BF"};
-			["Jake"] = {Side = "Right", Animation = "Dad"}
+			["GF"] = {Side = "Left", Animation = "Pibby"};
+			["Jake"] = {Side = "Right", Animation = "JakeSiblings"}
 		};
 		BFAnimations = "BFPA";
 		NoteGroup = "Pibby";

@@ -3123,9 +3123,12 @@ function GoodHit(daNote)
 	
 	if char then
 		char.Holding=daNote.HoldParent;
-		if shared.cancelAnim == false and not daNote.noAnimation then
+		if shared.cancelAnim == false and not daNote.noAnimation and not daNote.CustomAnimation then
 			char:PlayAnimation("sing" .. sDir[daNote.NoteData+1],true)
-		end	
+		elseif shared.cancelAnim == false and not daNote.noAnimation and daNote.CustomAnimation then
+			print(daNote.CustomAnimation)
+			char:PlayAnimation(daNote.CustomAnimation,true)
+		end
 	end
 	
 	UpdateAccuracy()
@@ -3530,8 +3533,13 @@ function module.handleHit(strum,noteDiff,noteType,noteDir,sussy) -- this is what
 			else
 				char = (not flipMode and PlayerObjects.Dad or PlayerObjects.BF)
 			end
-			char:PlayAnimation("sing" .. sDir[note.NoteData+1],true)
-			note:Destroy()
+			if not note.noAnimation then
+				char:PlayAnimation("sing" .. sDir[note.NoteData+1],true)
+				note:Destroy()
+			elseif note.CustomAnimation then
+				print(note.CustomAnimation)
+				char:PlayAnimation(note.CustomAnimation)
+			end
 			break;
 		end
 	end

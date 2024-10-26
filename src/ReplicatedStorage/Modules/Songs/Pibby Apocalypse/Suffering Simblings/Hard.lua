@@ -50,7 +50,7 @@ return [==[
 					[
 						"Change Character",
 						"Dad",
-						"finn-slash"
+						"FinnTwoSword"
 					]
 				]
 			],
@@ -80,7 +80,7 @@ return [==[
 					[
 						"Change Character",
 						"Dad",
-						"finn-sword"
+						"FinnTwoSword"
 					]
 				]
 			],
@@ -198,7 +198,7 @@ return [==[
 				280000.000000001,
 				[
 					[
-						"Change Character",
+						"FinnTwoSword",
 						"Dad",
 						"finn-sword"
 					]
