@@ -978,9 +978,9 @@ function module.genSong(songName, songSettings, plr2) -- plr2: 1=dad2 2=bf2
 				objectOrder[indexx] = name
 				charOrder[indexx] = animation.Animation
 				local newSide = animation.Side ..tostring(i)
-				table.insert(sides, newSide)
 				
-				if i > 2 then
+				if not sides[animation.newSide] then
+					table.insert(sides, newSide)
 					if not module.PositioningParts[newSide] then
 						module.PositioningParts[newSide] = Instance.new("Part")
 						local newCFrame = module.PositioningParts[animation.Side].CFrame
@@ -988,7 +988,7 @@ function module.genSong(songName, songSettings, plr2) -- plr2: 1=dad2 2=bf2
 							if animation.Side == "Left" then
 								newCFrame *= CFrame.new(3,0,-2)
 							else
-								newCFrame *= CFrame.new(-3,0,2)
+								newCFrame *= CFrame.new(-2,0,-2)
 							end
 						end
 						--module.PositioningParts[newSide].Anchored = true
@@ -997,7 +997,7 @@ function module.genSong(songName, songSettings, plr2) -- plr2: 1=dad2 2=bf2
 					end
 				else
 					module.PositioningParts.Left2.CFrame = module.PositioningParts.Left.CFrame * CFrame.new(3, 0, -2)
-					module.PositioningParts.Right2.CFrame = module.PositioningParts.Right.CFrame * CFrame.new(-3, 0, 2)
+					module.PositioningParts.Right2.CFrame = module.PositioningParts.Right.CFrame * CFrame.new(-2, 0, -2)
 				end
 				makeAnimTable(name, repS.Animations.CharacterAnims:FindFirstChild(animation.Animation) or repS.Animations.CharacterAnims.Dad)
 				indexx +=1;
