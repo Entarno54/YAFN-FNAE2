@@ -26,6 +26,7 @@ local UserInputBind = require(game.ReplicatedStorage.Modules.UserInputBindables)
 local ScoreUtils = require(game.ReplicatedStorage.Modules.ScoreUtils)
 local Icons = require(game.ReplicatedStorage.Modules.Icons)
 local GameSettings = require(repS.Modules.GameSettings) 
+local RPC = require(repS.Modules.BloxstrapRPC)
 local ids = require(repS.SongIDs)
 local playerNoteOffsets= {}
 local opponentNoteOffsets = {}
@@ -105,6 +106,7 @@ local ratioDiffY = cam.ViewportSize.Y / defaultScreenSize.Y
 local visualiser = nil
 leaveButton = require(game.ReplicatedStorage.Modules.Topbar).getIcon("LeaveButton")
 leaveButton:setEnabled(false)
+local GameStartTime = os.time()
 -- Experimental
 
 -- modchart functions --
@@ -1600,9 +1602,9 @@ function module.genSong(songName, songSettings, plr2) -- plr2: 1=dad2 2=bf2
 				char = PlayerObjects.BF;
 			end)
 			:case('gf' or 'grilfriend', function()
-				char = nil;
+				char = PlayerObjects.GF or nil;
 				-- Girlfriend is not a character
-				return
+				-- return
 			end)
 			:default(function()
 				local var2 = value2
@@ -2634,6 +2636,9 @@ end
 --end
 function module.endSong()
 	-- Save Song Data
+	
+	if evil then coroutine.close(evil) evil = nil end
+	SetRPC()
 	if shared.song and validScore then
 		-- Only save the score on right side
 		if not flipMode then
@@ -2805,7 +2810,10 @@ function module.endSong()
 	songEndEvent:Fire()
 end
 
+local evil = nil
+
 function module.startSong()
+	local SongStartTime = os.time()
 	startingSong=false
 
 	instrSound:Resume()
@@ -2830,6 +2838,15 @@ function module.startSong()
 			loadedModchartData[i].Start()
 		end	
 	end
+	local SongEndTime = SongStartTime + songLength
+	evil = coroutine.create(function()
+		while true do
+			if not instrSound.Playing then break end
+			task.spawn(SetRPC, curSong, SongStartTime, SongEndTime)
+			task.wait(20)
+		end
+	end)
+	coroutine.resume(evil)
 end
 
 function module.flash(hex,speed,int)
@@ -5006,6 +5023,8 @@ end
 function module.Kill() -- Function is called when the player dies. If that wan't clear enough
 	--print("death")
 	pcall(KillclientAnims)
+	if evil then coroutine.close(evil) evil = nil end
+	SetRPC()
 	GameplayEvent:Fire("Death")
 	--module.endSong() -- Commented out because this already runs whenever the player dies
 end
@@ -5013,5 +5032,41 @@ end
 function module.GetSongs()
 	return songs:GetChildren()
 end
+
+function SetRPC(songname: string?, songtime: number?, songendtime: number?)
+	print(songname, songtime, songendtime)
+	if not songname then
+		RPC.SetRichPresence({
+			details = "Playing Entar's Friday Night",
+			state = "Not in a song",
+			timeStart = GameStartTime,
+			largeImage = {
+				assetId = 112418475060183,
+				hoverText = "Entar's Friday Night"
+			},
+			smallImage = {
+				assetId = 13409122839,
+				hoverText = "Roblox"
+			}
+		})
+	else
+		RPC.SetRichPresence({
+			details = "Playing "..songname.Parent.Name,
+			state = tostring(module.PlayerStats.Score).. " Score",
+			timeStart = songtime,
+			timeEnd = math.floor(songtime + songendtime),
+			largeImage = {
+				assetId = 112418475060183,
+				hoverText = "Entar's Friday Night"
+			},
+			smallImage = {
+				assetId = 13409122839,
+				hoverText = "Roblox"
+			}
+		})
+	end
+end
+
+SetRPC()
 
 return module

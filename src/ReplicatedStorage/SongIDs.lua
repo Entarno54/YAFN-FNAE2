@@ -162,14 +162,15 @@ return {
 	};
 	["Suffering Siblings"] = {
 		Instrumental = 138442962130905;
-		DadAnimations = "FinnTwoSword";
+		DadAnimations = "FinnSSOne";
 		ExtraAnimations = {
 			["GF"] = {Side = "Left", Animation = "Pibby"};
 			["Jake"] = {Side = "Right", Animation = "JakeSiblings"}
 		};
 		BFAnimations = "BFPA";
 		NoteGroup = "Pibby";
-		hideBox = true
+		hideBox = true;
+		mapProps = "FinnLearn"
 	}
 }
 --[[

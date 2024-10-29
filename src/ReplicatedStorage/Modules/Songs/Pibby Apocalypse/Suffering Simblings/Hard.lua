@@ -50,7 +50,7 @@ return [==[
 					[
 						"Change Character",
 						"Dad",
-						"FinnTwoSword"
+						"FinnSSSlash"
 					]
 				]
 			],
@@ -69,7 +69,7 @@ return [==[
 				[
 					[
 						"Play Animation",
-						"idle-alt",
+						"waah",
 						"GF"
 					]
 				]

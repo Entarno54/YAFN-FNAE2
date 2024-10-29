@@ -10,9 +10,9 @@ return function(note)
 	elseif note.RawData[4] == "Both Chat Sing" and note.RawData[2] <= 3 then
 		note.bro = {"Dad", "Jake"}
 	elseif note.RawData[4] == "Dodge Note" then
-		note.CustomAnimation = "Dodge"
+		note.CustomAnimation = "dodge"
 	elseif note.RawData[4] == "Attack Note" then
-		note.CustomAnimation = "Shoot"..tostring(math.random(1, 3))
+		note.CustomAnimation = "shoot"..tostring(math.random(1, 3))
 	end
 	if note.RawData[4] then
 		print(note.RawData[4])

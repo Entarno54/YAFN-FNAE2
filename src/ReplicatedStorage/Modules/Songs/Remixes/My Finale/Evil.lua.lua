@@ -2,12 +2,12 @@ local helper = require(game.ReplicatedStorage.Modules.ModchartHelper)
 local evil = nil
 local evil2 = nil
 return {
-	P2NoteHit = function()
-		print(flipMode)
-		if plrStats.Health >= 0.05 then
-			plrStats.Health -= 0.03
-		end
-	end,
+	-- P2NoteHit = function()
+	-- 	print(flipMode)
+	-- 	if plrStats.Health >= 0.05 then
+	-- 		plrStats.Health -= 0.03
+	-- 	end
+	-- end,
 	Start = function()
 		if not evil and not evil2 then
 			evil = addSprite('Overlay', Color3.fromRGB(0,0,0), gameUI)

@@ -519,6 +519,7 @@ function Character:PlayAnimation(name,force,looped)
 	if self.Flipped then
 		if name=="singRIGHT" then name="singLEFT" elseif name=="singLEFT" then name="singRIGHT" end
 	end
+	-- print(self.Animations)
 	local track = self.Animations[name]
 	if(track)then
 		-- Returns if there is a already playing animation and it is not forced
